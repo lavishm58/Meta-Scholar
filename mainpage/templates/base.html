@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %} "/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <title>SE</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="container-fluid">
+        <div class="navbar-header">
+		    <a class="navbar-brand" href="/mainpage/">SE</a>
+	    </div>
+    	<div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav">
+
+			<li class="active"><a href="#">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Profiles
+            </a>
+            </li>
+		</ul>
+		<form class="navbar-form navbar-left" role="search" method="get" action="/search/"/>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search" name="entry" value="{{query}}">
+			</div>
+			<button type="submit" class="btn btn-default">Search</button>
+		</form>
+        </div>
+        </div>
+</nav>
+
+<div class="select">
+<div class="btn-group">
+<span class="but"><a href="/gsandss/">
+	<button type="button" class="btn btn-info">
+	GS and SS</button>
+</a></span><span class="but"><a href="/ssandscopus" >
+<button type="button" class="btn btn-info">
+	SS and scopus</button>
+	</a>
+</span><span class="but">
+<a href="/gsandscopus">
+<button type="button" class="btn btn-info">
+	GS and scopus</button>
+	</a>
+</span><span class="but">
+	<a href="/all">
+	<button type="button" class="btn btn-info">
+	all</button>
+	</a></span>
+</div>
+</div>
+{% block body %}
+{%endblock %}
+</body>
+</html>
