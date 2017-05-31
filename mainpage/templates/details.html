@@ -1,0 +1,52 @@
+
+{% extends 'mainpage/base.html' %}
+
+{% block body %}
+<div class="container">
+   <div class="column column-one">
+	   <h3 class="h3">Google Scholar</h3>
+	   {%for i in gs%}
+	   <div class="results">
+		   {%if i.1 != None %}
+		   		<a href="{{i.1}}">
+				{{i.0}}
+			   </a>
+		   {%else %}
+		   		{{i.0}}
+		   {% endif %}
+		</div>
+	   {% endfor %}
+   </div>
+   <div class="column column-two">
+	   <h3 class="h3">Semantic Scholar</h3>
+   	   {%for i in ss%}
+	   <div class="results">
+		   {%if i.1 != None %}
+		   		<a href="{{i.1}}">
+				{{i.0}}
+			   </a>
+		   {%else%}
+		   		{{i.0}}
+		   {% endif %}
+
+		</div>
+	   {% endfor %}
+   </div>
+   <div class="column column-three">
+	   <h3 class="h3">Scopus</h3>
+   	   {%for i in scopus%}
+	   <div class="results">
+		   {%if i.1 != None %}
+		   		<a href="{{i.1}}">
+				{{i.0}}
+			   </a>
+		   {%else %}
+		   		{{i.0}}
+		   {% endif %}
+		</div>
+	   {% endfor %}
+   </div>
+</div>
+
+{%endblock %}
+
