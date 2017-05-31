@@ -1,0 +1,41 @@
+.but{
+margin:0px;}
+
+.container{
+font-family:'times';
+display:flex;
+width:100%;
+padding:15px;}
+
+.column {
+    flex: 1;
+    padding:10px;
+    display:inline-block;
+    width:100px;
+    height:100%;
+    overflow:auto;
+    border-color:rgb(225,225,225);
+    border: 1px solid #2e3d49;;
+    box-sizing: border-box;
+    margin:10px;
+}
+.h3 {
+
+text-align:center;}
+.column-one {
+    order: 1;
+    box-sizing:border-box;
+    display:inline-block;
+    position:relative;
+}
+.column-two {
+    order: 2;
+}
+.column-three {
+    order: 3;
+}
+
+.search{
+    overflow: hidden;
+
+}
