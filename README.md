@@ -1,6 +1,9 @@
 # Meta-Scholar
 Here it is a meta-search engine for scholar research papers ,it combines the result of Google Scholar,Semantic Scholar and Scopus search engines with third party authentification of google api.
 
+Google Scholar,Semantic Scholar results are outputed using urllib.request and for scopus I have used the official api.
+
+
 # Result Page
 
 ![screenshot from 2017-06-07 06 14 19](https://cloud.githubusercontent.com/assets/20322910/26644645/1243334a-4653-11e7-94a0-20625eacff78.png)
