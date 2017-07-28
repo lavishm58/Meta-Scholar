@@ -1,17 +1,45 @@
-# Meta-Scholar
-## Setup
-# Using virtual environment
+# Meta-Scholar #
 Here it is a meta-search engine for scholar research papers ,it combines the result of Google Scholar,Semantic Scholar and Scopus search engines with third party authentification of google api.
 
-Google Scholar,Semantic Scholar results are outputed using urllib.request and for scopus I have used the official api.
+## Setup ##
+## Using virtual environment ##
+Below intructions are given for ubuntu
+* Install python pip and virtualenv
 
+```
+sudo apt-get install python3 python3-pip
+pip3 install virtualenv
+```
+* Setup virtual env and Install Django--version=1.9
 
-# Result Page
+```
+virtualenv -p python3 venv_py3
+source venv_py3/bin/activate
+pip3 install django==1.9
+```
+* Clone repository 
 
-![screenshot from 2017-06-07 06 14 19](https://cloud.githubusercontent.com/assets/20322910/26644645/1243334a-4653-11e7-94a0-20625eacff78.png)
+```
+git clone https://github.com/lavishm58/Meta-Scholar.git
+cd Meta-Scholar
 
-# Third Party Authentification
+```
 
-![screenshot from 2017-05-31 22 17 28](https://cloud.githubusercontent.com/assets/20322910/26644660/190d1dbc-4653-11e7-9ad5-03f9a7a034ab.png)
+* Install dependencies needed
 
-![screenshot from 2017-05-31 22 49 09](https://cloud.githubusercontent.com/assets/20322910/26644779/829aaff6-4653-11e7-8ff4-1e9a6220f253.png)
+```
+pip3 install -r requirements.txt
+```
+
+* deploying webapp to your machine
+
+```
+python manage.py migrate
+python manage.py runserver
+```
+Now,the webapp can be opened up in localhost server,127.0.0.1:8000
+
+# Demo app
+
+![screenshot from 2017-07-22 05-28-55](https://user-images.githubusercontent.com/20322910/28703716-87b72cfa-7383-11e7-8742-7cc6887912d7.png)
+
